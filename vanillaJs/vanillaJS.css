@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Truculenta:opsz,wght@12..72,300;12..72,400&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Rubik Doodle Shadow;
+  font-size: 36px;
+  color: gray;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  font-family: truculenta;
+  font-size: 18px;
+  max-width: 400px;
+  border: solid gray 1px;
+  border-radius: 7px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items li {
+  background-color: tomato;
+  border: 1px tomato solid;
+  color: white;
+  border-radius: 2px;
+  padding: 2px 20px;
+}
+
+.nav-items li:hover {
+  background-color: transparent;
+  color: tomato;
+}
+
+.detail {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.detail .temp {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.temp img {
+  height: 72px;
+}
+
+.temp .numbers {
+  display: flex;
+  align-items: start;
+}
+
+.temp-value {
+  font-family: Rubik Doodle Shadow;
+  font-size: 44px;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 16px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  padding: 2px 20px;
+  background-color: rgba(255, 99, 71, 0.3);
+  border-radius: 2px;
+}
+
+.forecast-day:hover {
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.forecast-day img {
+  width: 48px;
+}
+
+.forecast-high-temp {
+  color: tomato;
+}
