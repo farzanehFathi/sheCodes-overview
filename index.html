@@ -8,15 +8,27 @@
   </head>
   <body>
     <div class="container">
-      <ul class="nav-items">
+      <div>
+        <form class="search-bar" action="" id="search-form">
+          <input
+            type="text"
+            name="search"
+            class="search-input"
+            id="city-input"
+            placeholder="Please enter a city"
+          />
+          <input type="submit" class="search-submit" value="Search" />
+        </form>
+      </div>
+      <ul class="nav-items" id="nav-items">
         <li>Lisbon</li>
         <li>London</li>
         <li>New York</li>
         <li>Sydney</li>
       </ul>
-      <h1>Paris</h1>
+      <h1 id="city">Paris</h1>
       <ul class="summary">
-        <li>Wednesday, 22:00</li>
+        <li id="date"></li>
         <li>Partly Cloudy</li>
       </ul>
       <div class="detail">
@@ -79,5 +91,6 @@
         </div>
       </div>
     </div>
+    <script src="vanillaJs/vanillaJs.js"></script>
   </body>
 </html>

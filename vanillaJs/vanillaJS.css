@@ -36,6 +36,7 @@ ul {
 .nav-items {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .nav-items li {
@@ -105,4 +106,29 @@ ul {
 
 .forecast-high-temp {
   color: tomato;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar .search-input {
+  width: 75%;
+  height: 30px;
+  border-radius: 15px 0 0 15px;
+  border: 0px;
+  background-color: #f0f0f0;
+  padding: 2px 2px 2px 20px;
+}
+
+.search-bar .search-input:focus {
+  outline: none;
+  background-color: rgba(255, 99, 71, 0.1);
+}
+
+.search-bar .search-submit {
+  width: 25%;
+  border-radius: 0 15px 15px 0;
+  border: 0px;
 }
