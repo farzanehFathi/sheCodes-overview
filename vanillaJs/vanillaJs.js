@@ -6,26 +6,30 @@
 //   tehran: { temp: 32, humidity: 35 },
 // };
 
-// let city = prompt("pleace enter a city!");
+// let city = prompt("please enter a city ...");
 
 // if (weather[city] !== undefined) {
-//   alert(`It is currently ${Math.round(weather[city].temp)} in ${city}!`);
+//   alert(`it's ${weather[city].temp} in ${city}!`);
 // } else {
-//   alert("Sorry, we don't have the weather data for this city");
+//   alert("Sorry, we don't have this city");
 // }
+
+function digitCorrection(a) {
+  if (a < 10) {
+    return `0${a}`;
+  } else {
+    return a;
+  }
+}
 
 function formattedDate(date) {
   let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
+  hours = digitCorrection(hours);
 
   let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  minutes = digitCorrection(minutes);
 
-  let dayNum = date.getDay();
+  let dayIndex = date.getDay();
   let dayList = [
     "Sunday",
     "Monday",
@@ -35,29 +39,32 @@ function formattedDate(date) {
     "Friday",
     "Saturday",
   ];
+  let day = dayList[dayIndex];
 
-  let day = dayList[dayNum];
   return `${day}, ${hours} : ${minutes}`;
 }
 
+let currentDate = new Date();
+
+let dateElement = document.querySelector("#date");
+dateElement.innerHTML = formattedDate(currentDate);
+
+///
+
+let cityElement = document.querySelector("#city");
+
 function search(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
   cityElement.innerHTML = cityInput.value;
 }
 
 function navigate(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
   if (event.target.tagName === "LI") {
     cityElement.innerHTML = event.target.innerHTML;
   }
 }
-
-let dateElement = document.querySelector("#date");
-let currentDate = new Date();
-dateElement.innerHTML = formattedDate(currentDate);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
