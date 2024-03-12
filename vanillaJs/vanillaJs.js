@@ -7,11 +7,16 @@
 // };
 
 // let city = prompt("please enter a city ...");
+// city = city.toLowerCase();
 
 // if (weather[city] !== undefined) {
-//   alert(`it's ${weather[city].temp} in ${city}!`);
+//   alert(
+//     `the temp in ${city} is ${Math.round(
+//       weather[city].temp
+//     )} and the humidity is ${weather[city].humidity}`
+//   );
 // } else {
-//   alert("Sorry, we don't have this city");
+//   alert("please enter a valid city name");
 // }
 
 function digitCorrection(a) {
